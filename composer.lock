@@ -489,42 +489,46 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "1.5.2",
+            "version": "1.8.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "9f83dded91781a01c63574e387eaa769be769115"
+                "reference": "337e3ad8e5716c15f9657bd214d16cc5e69df268"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/9f83dded91781a01c63574e387eaa769be769115",
-                "reference": "9f83dded91781a01c63574e387eaa769be769115",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/337e3ad8e5716c15f9657bd214d16cc5e69df268",
+                "reference": "337e3ad8e5716c15f9657bd214d16cc5e69df268",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.4.0",
                 "psr/http-message": "~1.0",
-                "ralouphie/getallheaders": "^2.0.5"
+                "ralouphie/getallheaders": "^2.0.5 || ^3.0.0"
             },
             "provide": {
                 "psr/http-message-implementation": "1.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.8.36 || ^5.7.27 || ^6.5.8"
+                "ext-zlib": "*",
+                "phpunit/phpunit": "~4.8.36 || ^5.7.27 || ^6.5.14 || ^7.5.20 || ^8.5.8 || ^9.3.10"
+            },
+            "suggest": {
+                "laminas/laminas-httphandlerrunner": "Emit PSR-7 responses"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.5-dev"
+                    "dev-master": "1.7-dev"
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\Psr7\\": "src/"
-                },
                 "files": [
                     "src/functions_include.php"
-                ]
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\Psr7\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -532,12 +536,33 @@
             ],
             "authors": [
                 {
+                    "name": "Graham Campbell",
+                    "email": "hello@gjcampbell.co.uk",
+                    "homepage": "https://github.com/GrahamCampbell"
+                },
+                {
                     "name": "Michael Dowling",
                     "email": "mtdowling@gmail.com",
                     "homepage": "https://github.com/mtdowling"
                 },
                 {
+                    "name": "George Mponos",
+                    "email": "gmponos@gmail.com",
+                    "homepage": "https://github.com/gmponos"
+                },
+                {
+                    "name": "Tobias Nyholm",
+                    "email": "tobias.nyholm@gmail.com",
+                    "homepage": "https://github.com/Nyholm"
+                },
+                {
+                    "name": "Márk Sági-Kazár",
+                    "email": "mark.sagikazar@gmail.com",
+                    "homepage": "https://github.com/sagikazarmark"
+                },
+                {
                     "name": "Tobias Schultze",
+                    "email": "webmaster@tubo-world.de",
                     "homepage": "https://github.com/Tobion"
                 }
             ],
@@ -552,7 +577,25 @@
                 "uri",
                 "url"
             ],
-            "time": "2018-12-04T20:46:45+00:00"
+            "support": {
+                "issues": "https://github.com/guzzle/psr7/issues",
+                "source": "https://github.com/guzzle/psr7/tree/1.8.5"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/GrahamCampbell",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/Nyholm",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/guzzlehttp/psr7",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-03-20T21:51:18+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -1750,6 +1793,9 @@
                 "request",
                 "response"
             ],
+            "support": {
+                "source": "https://github.com/php-fig/http-message/tree/master"
+            },
             "time": "2016-08-06T14:39:51+00:00"
         },
         {
@@ -1923,24 +1969,24 @@
         },
         {
             "name": "ralouphie/getallheaders",
-            "version": "2.0.5",
+            "version": "3.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ralouphie/getallheaders.git",
-                "reference": "5601c8a83fbba7ef674a7369456d12f1e0d0eafa"
+                "reference": "120b605dfeb996808c31b6477290a714d356e822"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ralouphie/getallheaders/zipball/5601c8a83fbba7ef674a7369456d12f1e0d0eafa",
-                "reference": "5601c8a83fbba7ef674a7369456d12f1e0d0eafa",
+                "url": "https://api.github.com/repos/ralouphie/getallheaders/zipball/120b605dfeb996808c31b6477290a714d356e822",
+                "reference": "120b605dfeb996808c31b6477290a714d356e822",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3"
+                "php": ">=5.6"
             },
             "require-dev": {
-                "phpunit/phpunit": "~3.7.0",
-                "satooshi/php-coveralls": ">=1.0"
+                "php-coveralls/php-coveralls": "^2.1",
+                "phpunit/phpunit": "^5 || ^6.5"
             },
             "type": "library",
             "autoload": {
@@ -1959,7 +2005,11 @@
                 }
             ],
             "description": "A polyfill for getallheaders.",
-            "time": "2016-02-11T07:05:27+00:00"
+            "support": {
+                "issues": "https://github.com/ralouphie/getallheaders/issues",
+                "source": "https://github.com/ralouphie/getallheaders/tree/develop"
+            },
+            "time": "2019-03-08T08:55:37+00:00"
         },
         {
             "name": "ramsey/uuid",
@@ -3854,80 +3904,6 @@
             "time": "2018-11-21T21:40:54+00:00"
         },
         {
-            "name": "pelago/emogrifier",
-            "version": "v2.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/MyIntervals/emogrifier.git",
-                "reference": "8ee7fb5ad772915451ed3415c1992bd3697d4983"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/MyIntervals/emogrifier/zipball/8ee7fb5ad772915451ed3415c1992bd3697d4983",
-                "reference": "8ee7fb5ad772915451ed3415c1992bd3697d4983",
-                "shasum": ""
-            },
-            "require": {
-                "ext-dom": "*",
-                "ext-libxml": "*",
-                "php": "^5.5.0 || ~7.0.0 || ~7.1.0 || ~7.2.0 || ~7.3.0",
-                "symfony/css-selector": "^3.4.0 || ^4.0.0"
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "^2.2.0",
-                "phpmd/phpmd": "^2.6.0",
-                "phpunit/phpunit": "^4.8.0",
-                "squizlabs/php_codesniffer": "^3.3.2"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Pelago\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "John Reeve",
-                    "email": "jreeve@pelagodesign.com"
-                },
-                {
-                    "name": "Cameron Brooks"
-                },
-                {
-                    "name": "Jaime Prado"
-                },
-                {
-                    "name": "Oliver Klee",
-                    "email": "github@oliverklee.de"
-                },
-                {
-                    "name": "Zoli Szabó",
-                    "email": "zoli.szabo+github@gmail.com"
-                },
-                {
-                    "name": "Jake Hotson",
-                    "email": "jake@qzdesign.co.uk"
-                }
-            ],
-            "description": "Converts CSS styles into inline style attributes in your HTML code",
-            "homepage": "https://www.myintervals.com/emogrifier.php",
-            "keywords": [
-                "css",
-                "email",
-                "pre-processing"
-            ],
-            "time": "2018-12-10T10:36:30+00:00"
-        },
-        {
             "name": "phar-io/manifest",
             "version": "1.0.3",
             "source": {
@@ -5308,48 +5284,6 @@
             "time": "2019-04-04T09:56:43+00:00"
         },
         {
-            "name": "tonchik-tm/pdf-to-html",
-            "version": "1.0.9",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/tonchik-tm/pdf-to-html.git",
-                "reference": "054d3dca5bee718e14e3a6b5ab3421adc01e469e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/tonchik-tm/pdf-to-html/zipball/054d3dca5bee718e14e3a6b5ab3421adc01e469e",
-                "reference": "054d3dca5bee718e14e3a6b5ab3421adc01e469e",
-                "shasum": ""
-            },
-            "require": {
-                "pelago/emogrifier": "^2.0.0",
-                "php": ">=5.4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "TonchikTm": "src"
-                },
-                "psr-4": {
-                    "TonchikTm\\PdfToHtml\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Anton Nikolaev",
-                    "email": "tonchik@tonchik.net",
-                    "homepage": "http://www.tonchik.net",
-                    "role": "Developer"
-                }
-            ],
-            "description": "This PHP class can convert your pdf files to html using poppler-utils.",
-            "time": "2018-06-28T19:14:26+00:00"
-        },
-        {
             "name": "webmozart/assert",
             "version": "1.4.0",
             "source": {
@@ -5409,5 +5343,6 @@
     "platform": {
         "php": "^7.1.3"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.2.0"
 }
